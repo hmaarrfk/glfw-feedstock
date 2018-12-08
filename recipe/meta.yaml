@@ -10,13 +10,14 @@ source:
   sha256: e10f0de1384d75e6fc210c53e91843f6110d6c4f3afbfb588130713c2f9d8fe8
 
 build:
-  number: 2
+  number: 3
   skip: True   # [osx]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - cmake
+    - msinttypes             # [win]
     - pkg-config             # [not win]
   host:
     - xorg-libx11            # [unix]
