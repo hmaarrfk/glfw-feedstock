@@ -7,9 +7,15 @@ cd build
 # need to be linked against.
 # In the past, I had to use
 # CFLAGS="${CFLAGS} -lm -lrt -ldl -lX11 -lpthread -lXrandr -lXinerama -lXcursor"
-# -DRT_LIBRARY=${PREFIX}/lib 
+# -DRT_LIBRARY=${PREFIX}/lib
 # -DMATH_LIBRARY=${PREFIX}/lib
-cmake  \
+#
+# I might need to add
+#
+# if [[ "$c_compiler" == "gcc" ]]; then
+#   export PATH="${PATH}:${BUILD_PREFIX}/${HOST}/sysroot/usr/lib"
+# fi
+cmake                                 \
     -DCMAKE_PREFIX_PATH=${PREFIX}     \
     -DCMAKE_INSTALL_PREFIX=${PREFIX}  \
     -DBUILD_SHARED_LIBS=ON            \

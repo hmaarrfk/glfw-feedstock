@@ -11,12 +11,10 @@ source:
 
 build:
   number: 0
-  skip: True   # [not linux]
+  skip: True   # [osx]
 
 requirements:
   build:
-    # if your project compiles code (such as a C extension) then add the required compilers as separate entries here.
-    # compilers are named 'c', 'cxx' and 'fortran'.
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
@@ -39,6 +37,8 @@ test:
   commands:
     - test -f $PREFIX/lib/libglfw.so               # [linux]
     - conda inspect linkages -p $PREFIX $PKG_NAME  # [linux]
+    - if not exist %PREFIX%/Library/lib/glfw3dll.lib exit 1  # [win]
+    - if not exist %PREFIX%/Library/lib/glfw3.dll exit 1     # [win]
 
 about:
   home: https://www.glfw.org/
