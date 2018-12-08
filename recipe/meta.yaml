@@ -10,13 +10,12 @@ source:
   sha256: e10f0de1384d75e6fc210c53e91843f6110d6c4f3afbfb588130713c2f9d8fe8
 
 build:
-  number: 1
+  number: 2
   skip: True   # [osx]
 
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
     - cmake
     - pkg-config             # [not win]
   host:
