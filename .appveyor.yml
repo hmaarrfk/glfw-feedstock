@@ -9,10 +9,7 @@ environment:
     secure: a8JN3c8s+67YV0kXG3aTQroHnYbyyZ9QNDK2cc/xJTFHzBnpTnu1jdOdFTb/Epek
 
   matrix:
-    - CONFIG: win_c_compilervs2008
-      CONDA_INSTALL_LOCN: C:\Miniconda36-x64
-
-    - CONFIG: win_c_compilervs2015
+    - CONFIG: win_c_compilervs2015vc14
       CONDA_INSTALL_LOCN: C:\Miniconda36-x64
 
 

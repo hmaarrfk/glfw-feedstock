@@ -1,6 +1,0 @@
-c_compiler:
-- vs2008
-channel_sources:
-- ramonaoptics,conda-forge,defaults
-channel_targets:
-- ramonaoptics main
