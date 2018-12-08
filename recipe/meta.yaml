@@ -19,6 +19,14 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
+  host:
+    - xorg-libx11  # [unix]
+    - xorg-libxrandr  # [unix]
+    - xorg-xineramaproto  # [unix]
+  run:
+    - xorg-libx11  # [unix]
+    - xorg-libxrandr  # [unix]
+    - xorg-xineramaproto  # [unix]
 
 #test:
   #imports:

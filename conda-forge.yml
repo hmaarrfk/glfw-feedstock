@@ -1,1 +1,20 @@
-[]
+# Needed for readme generation
+channels:
+  targets:
+  - [ramonaoptics, main]
+
+# Needed for ci_support
+channel_sources:
+- ramonaoptics,conda-forge,defaults
+
+# Needed for ci_support
+channel_targets:
+- ramonaoptics main
+
+# Needed for something else
+github:
+  user_or_org: ramonaoptics
+  branch_name: mine
+travis:
+  secure:
+    BINSTAR_TOKEN: d0bOyau7P/WevWnmQAU7ApsRipzjv6yz++ymeg9NL1Yit7LTZAM62VCyO1+4UAq7ULzfICgm3Qlx3BLGxurUSSSEMn8e2UJNYZlFlBB09i0dGK/AMI0MnrfmNqIKtNMM5fDEnwu2NNKI2a/J7rX70n5yDpoKGSs17nbfKQbJFcogUvVdL3vqKQqWdbmR49XI5jyBEmGkwRVdiHphBMWHsXKnegQVb4zsI7IpqznpO3V/+xmhJOXik/4/XMSX8CQ/hyrc2OJPiM2JD1GRyz46GlP9yHDSvKw34net9jNIvzewvhChWDS22WTzk+UlVzOAMRk2B8nohSfZGrAJfh3mH2+0KCPBgv2zSYzFWYV0XZgBjmE4aEMzx4SZ2raVGYjXCHqCxzHJ49OErHk8OVLKKivQ2RLXGBak71/g3buDlv4FtmhNeW6a+DF/aEx686ia3xXGIu7oRtIAL9kSAcluJ7wLmlPrtxkjII5ztHlW43y4u7ushZb3Eg4lD7dhTq4/PbPZqjIdSn0BysXepu0RKg99cvAL0812md5HD5gSR+4us37RgG+li0ZkoE56VK+L7s9IT+RnWnPf3FuH4Hms0M4XK6f/aiowt2szi/QqHUhVhMOkGE59Ttk8nohCVsRzB1OehmwguxVY5WR8sjtUcRZ8cjwy+u/hptUXcBvp3G8=
