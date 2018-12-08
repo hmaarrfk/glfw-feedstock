@@ -1,0 +1,11 @@
+c_compiler:
+- vs2015
+channel_sources:
+- ramonaoptics,conda-forge,defaults
+channel_targets:
+- ramonaoptics main
+cxx_compiler:
+- vs2015
+zip_keys:
+- - c_compiler
+  - cxx_compiler
