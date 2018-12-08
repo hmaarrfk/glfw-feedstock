@@ -1,0 +1,10 @@
+c_compiler:
+- toolchain_c
+channel_sources:
+- ramonaoptics,conda-forge,defaults
+channel_targets:
+- ramonaoptics main
+cxx_compiler:
+- toolchain_cxx
+docker_image:
+- condaforge/linux-anvil

@@ -11,6 +11,7 @@ source:
 
 build:
   number: 0
+  skip: True   # [not linux]
 
 requirements:
   build:
@@ -19,24 +20,30 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
+    - pkg-config             # [not win]
   host:
-    - xorg-libx11  # [unix]
-    - xorg-libxrandr  # [unix]
-    - xorg-xineramaproto  # [unix]
+    - xorg-libx11            # [unix]
+    - xorg-libxrandr         # [unix]
+    - xorg-xineramaproto     # [unix]
+    - libximerna             # [linux]
+    - xorg-libxcursor        # [linux]
+    - mesalib                # [linux]
   run:
-    - xorg-libx11  # [unix]
-    - xorg-libxrandr  # [unix]
-    - xorg-xineramaproto  # [unix]
+    - xorg-libx11            # [linux]
+    - xorg-libxrandr         # [linux]
+    - libximerna             # [linux]
+    - xorg-libxcursor        # [linux]
+    - mesalib                # [linux]
 
-#test:
-  #imports:
-    #- simplejson
-    #- simplejson.tests
+test:
+  commands:
+    - test -f $PREFIX/lib/libglfw.so               # [linux]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [linux]
 
 about:
   home: https://www.glfw.org/
   license: Zlib
-  license_file: LICENSE.md
+  license_file: COPYING.txt
   summary: 'Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan application development.'
 
   # The remaining entries in this section are optional, but recommended
@@ -54,4 +61,3 @@ about:
 extra:
   recipe-maintainers:
     - hmaarrfk
-
