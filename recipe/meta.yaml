@@ -8,9 +8,12 @@ source:
   url: https://github.com/glfw/glfw/archive/{{ version }}.tar.gz
   fn: glfw-{{ version}}.tar.gz
   sha256: e10f0de1384d75e6fc210c53e91843f6110d6c4f3afbfb588130713c2f9d8fe8
+  patches:
+    # https://github.com/glfw/glfw/pull/1367
+    - GNUInstallDirs.patch
 
 build:
-  number: 3
+  number: 4
   skip: True   # [osx]
   skip: True   # [win and vc<14]
 
@@ -18,6 +21,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - cmake
+    - m2-patch               # [win]
     - pkg-config             # [not win]
   host:
     - xorg-libx11            # [unix]
@@ -38,7 +42,7 @@ test:
     - test -f $PREFIX/lib/libglfw.so               # [linux]
     - conda inspect linkages -p $PREFIX $PKG_NAME  # [linux]
     - if not exist %PREFIX%/Library/lib/glfw3dll.lib exit 1  # [win]
-    - if not exist %PREFIX%/Library/lib/glfw3.dll exit 1     # [win]
+    - if not exist %PREFIX%/Library/bin/glfw3.dll exit 1     # [win]
 
 about:
   home: https://www.glfw.org/
