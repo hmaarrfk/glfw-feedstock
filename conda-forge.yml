@@ -1,10 +1,8 @@
 channels:
-  # Needed for appveyor
   sources:
     - ramonaoptics
     - conda-forge
     - defaults
-  # Needed for readme generation
   targets:
   - [ramonaoptics, main]
 
@@ -15,6 +13,11 @@ channel_sources:
 # Needed for ci_support
 channel_targets:
 - ramonaoptics main
+
+# Needed for something else
+github:
+  user_or_org: ramonaoptics
+  branch_name: master
 
 travis:
   secure:
