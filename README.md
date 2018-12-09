@@ -22,8 +22,8 @@ available but not yet officially supported.
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/ramonaoptics/glfw-feedstock/mine.svg?label=Linux)](https://circleci.com/gh/ramonaoptics/glfw-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/ramonaoptics/glfw-feedstock/mine.svg?label=Windows)](https://ci.appveyor.com/project/ramonaoptics/glfw-feedstock/branch/mine)
+[![Linux](https://img.shields.io/circleci/project/github/ramonaoptics/glfw-feedstock/master.svg?label=Linux)](https://circleci.com/gh/ramonaoptics/glfw-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/ramonaoptics/glfw-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/ramonaoptics/glfw-feedstock/branch/master)
 ![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
 
 Current release info
